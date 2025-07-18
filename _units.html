@@ -100,7 +100,7 @@ $(function(){initNavTree('_units.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">Measurement Units</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The toolkit can use data expressed in either US Customary of SI Metric units. A project's unit system depends on the unit system used for its choice of flow units. If the <a class="el" href="group___project.html#gabda293c7ce17814fc886ecb1f71ecdf1">EN_open</a> function is used to supply data to a project from an Input File then its flow units are set in the <a class="el" href="_options_page.html">[OPTIONS]</a> section of the file. If the <a class="el" href="group___project.html#ga85ee60fa7ba313a02fd0c1213fc7f5b2">EN_init</a> function is used to initialize a project then the choice of flow units is the fourth argument to the function. The following table lists the units used to express the various parameters in an EPANET model.</p>
+<div class="textblock"><p>The toolkit can use data expressed in either US Customary of SI Metric units. A project's unit system depends on the unit system used for its choice of flow units. If the <a class="el" href="group___project.html#gabda293c7ce17814fc886ecb1f71ecdf1">EN_open</a> function is used to supply data to a project from an Input File then its flow units are set in the <a class="el" href="_options_page.html">[OPTIONS]</a> section of the file. If the <a class="el" href="group___project.html#ga85ee60fa7ba313a02fd0c1213fc7f5b2">EN_init</a> function is used to initialize a project then the choice of flow units is the fourth argument to the function. An exception to this convention is pressure whose units can be expressed in either US or SI units. The following table lists the units used to express the various parameters in an EPANET model.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Parameter   </th><th class="markdownTableHeadNone">US Customary   </th><th class="markdownTableHeadNone">SI Metric    </th></tr>
@@ -143,7 +143,11 @@ $(function(){initNavTree('_units.html',''); initResizable(true); });
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Power   </td><td class="markdownTableBodyNone">horsepower   </td><td class="markdownTableBodyNone">kwatts    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Pressure   </td><td class="markdownTableBodyNone">psi   </td><td class="markdownTableBodyNone">meters or kPa    </td></tr>
+<td class="markdownTableBodyNone">Pressure   </td><td class="markdownTableBodyNone">psi (pounds / sq. in.)   </td><td class="markdownTableBodyNone">meters    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">feet   </td><td class="markdownTableBodyNone">kPa (kiloPascal)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">bar    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Reaction Coeff. (Bulk)   </td><td class="markdownTableBodyNone">1/day (1st-order)   </td><td class="markdownTableBodyNone">1/day (1st-order)    </td></tr>
 <tr class="markdownTableRowEven">

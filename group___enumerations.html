@@ -519,7 +519,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ga84af78c42cef7c16a513fbdba3b7f4eda6b6ae9f5af17242b1e161d48a756c30f" name="ga84af78c42cef7c16a513fbdba3b7f4eda6b6ae9f5af17242b1e161d48a756c30f"></a>EN_INITSETTING&#160;</td><td class="fielddoc"><p>Initial pump speed or valve setting. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ga84af78c42cef7c16a513fbdba3b7f4edae7cddffdba155c0ef7a9134a1046ed6d" name="ga84af78c42cef7c16a513fbdba3b7f4edae7cddffdba155c0ef7a9134a1046ed6d"></a>EN_KBULK&#160;</td><td class="fielddoc"><p>Bulk chemical reaction coefficient. </p>
+<tr><td class="fieldname"><a id="ga84af78c42cef7c16a513fbdba3b7f4edae7cddffdba155c0ef7a9134a1046ed6d" name="ga84af78c42cef7c16a513fbdba3b7f4edae7cddffdba155c0ef7a9134a1046ed6d"></a>EN_KBULK&#160;</td><td class="fielddoc"><p>Bulk flow chemical reaction coefficient. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ga84af78c42cef7c16a513fbdba3b7f4eda1e5e79064fbbdb9838a2d928a903a49f" name="ga84af78c42cef7c16a513fbdba3b7f4eda1e5e79064fbbdb9838a2d928a903a49f"></a>EN_KWALL&#160;</td><td class="fielddoc"><p>Pipe wall chemical reaction coefficient. </p>
 </td></tr>
@@ -557,7 +557,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ga84af78c42cef7c16a513fbdba3b7f4eda748fa0cf00aa220fe9ae61f39dd66fd3" name="ga84af78c42cef7c16a513fbdba3b7f4eda748fa0cf00aa220fe9ae61f39dd66fd3"></a>EN_GPV_CURVE&#160;</td><td class="fielddoc"><p>GPV head loss v. flow curve index. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ga84af78c42cef7c16a513fbdba3b7f4eda9fd02a7667872af4409c5af5d407cccf" name="ga84af78c42cef7c16a513fbdba3b7f4eda9fd02a7667872af4409c5af5d407cccf"></a>EN_PCV_CURVE&#160;</td><td class="fielddoc"><p>PCV loss coeff. curve index. </p>
+<tr><td class="fieldname"><a id="ga84af78c42cef7c16a513fbdba3b7f4eda9fd02a7667872af4409c5af5d407cccf" name="ga84af78c42cef7c16a513fbdba3b7f4eda9fd02a7667872af4409c5af5d407cccf"></a>EN_PCV_CURVE&#160;</td><td class="fielddoc"><p>PCV characteristic curve index. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ga84af78c42cef7c16a513fbdba3b7f4eda0e7f2f2930c7781b41604173f8f26cc4" name="ga84af78c42cef7c16a513fbdba3b7f4eda0e7f2f2930c7781b41604173f8f26cc4"></a>EN_LEAK_AREA&#160;</td><td class="fielddoc"><p>Pipe leak area (sq mm per 100 length units) </p>
 </td></tr>
@@ -585,6 +585,12 @@ Enumerations</h2></td></tr>
 
 <p>Link status. </p>
 <p>One of these values is returned when <a class="el" href="group___links.html#ga0d7ae66dd64e55abd45ab6175e8e200d">EN_getlinkvalue</a> is used to retrieve a link's initial status (<code>EN_INITSTATUS</code>) or its current status (<code>EN_STATUS</code>). These options are also used with <a class="el" href="group___links.html#ga510d5d4e8bf94b69c2cd04e786cf3f8e">EN_setlinkvalue</a> to set values for these same properties. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gac93e311004297ce675318237f62765cdaf8ea0291eee66d9647dceec860e92e40" name="gac93e311004297ce675318237f62765cdaf8ea0291eee66d9647dceec860e92e40"></a>EN_CLOSED&#160;</td><td class="fielddoc"><p>Link is closed and cannot convey any flow. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gac93e311004297ce675318237f62765cda9ef4dbab6008c84cff94e0efd800debd" name="gac93e311004297ce675318237f62765cda9ef4dbab6008c84cff94e0efd800debd"></a>EN_OPEN&#160;</td><td class="fielddoc"><p>Link is open and is able to convey flow. </p>
+</td></tr>
+</table>
 
 </div>
 </div>
@@ -721,11 +727,11 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gae538c7e564d9bd7c5a1f841b107c417dab33478f2de092887ee64799ba0e370a9" name="gae538c7e564d9bd7c5a1f841b107c417dab33478f2de092887ee64799ba0e370a9"></a>EN_MAXVOLUME&#160;</td><td class="fielddoc"><p>Tank maximum volume (read only) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gae538c7e564d9bd7c5a1f841b107c417da0e7017b074fb5e9576432927813d9269" name="gae538c7e564d9bd7c5a1f841b107c417da0e7017b074fb5e9576432927813d9269"></a>EN_CANOVERFLOW&#160;</td><td class="fielddoc"><p>Tank can overflow (= 1) or not (= 0) </p>
+<tr><td class="fieldname"><a id="gae538c7e564d9bd7c5a1f841b107c417da0e7017b074fb5e9576432927813d9269" name="gae538c7e564d9bd7c5a1f841b107c417da0e7017b074fb5e9576432927813d9269"></a>EN_CANOVERFLOW&#160;</td><td class="fielddoc"><p><code>EN_TRUE</code> (= 1) if the Tank can overflow, <code>EN_FALSE</code> (= 0) if it cannot </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gae538c7e564d9bd7c5a1f841b107c417da03b18222ff8391d88a4402d49452f371" name="gae538c7e564d9bd7c5a1f841b107c417da03b18222ff8391d88a4402d49452f371"></a>EN_DEMANDDEFICIT&#160;</td><td class="fielddoc"><p>Amount that full demand is reduced under PDA (read only) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gae538c7e564d9bd7c5a1f841b107c417daf6a8e5865b9234b91b88ce1a055f1d35" name="gae538c7e564d9bd7c5a1f841b107c417daf6a8e5865b9234b91b88ce1a055f1d35"></a>EN_NODE_INCONTROL&#160;</td><td class="fielddoc"><p>Is present in any simple or rule-based control (= 1) or not (= 0) </p>
+<tr><td class="fieldname"><a id="gae538c7e564d9bd7c5a1f841b107c417daf6a8e5865b9234b91b88ce1a055f1d35" name="gae538c7e564d9bd7c5a1f841b107c417daf6a8e5865b9234b91b88ce1a055f1d35"></a>EN_NODE_INCONTROL&#160;</td><td class="fielddoc"><p><code>EN_TRUE</code> (= 1) if the node appears in any control, <code>EN_FALSE</code> (= 0) if not </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gae538c7e564d9bd7c5a1f841b107c417da020f2ccbdb82684f770630acf046f3ce" name="gae538c7e564d9bd7c5a1f841b107c417da020f2ccbdb82684f770630acf046f3ce"></a>EN_EMITTERFLOW&#160;</td><td class="fielddoc"><p>Current emitter flow (read only) </p>
 </td></tr>
@@ -858,7 +864,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gaedba9e624549e5c519756ec0619c5c79a7e56030ff18f3c63bea089080232c329" name="gaedba9e624549e5c519756ec0619c5c79a7e56030ff18f3c63bea089080232c329"></a>EN_DEMANDPATTERN&#160;</td><td class="fielddoc"><p>Name of default demand pattern. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gaedba9e624549e5c519756ec0619c5c79ae0bd52cb0d077231acb109748bc08e2d" name="gaedba9e624549e5c519756ec0619c5c79ae0bd52cb0d077231acb109748bc08e2d"></a>EN_EMITBACKFLOW&#160;</td><td class="fielddoc"><p>1 if emitters can backflow, 0 if not </p>
+<tr><td class="fieldname"><a id="gaedba9e624549e5c519756ec0619c5c79ae0bd52cb0d077231acb109748bc08e2d" name="gaedba9e624549e5c519756ec0619c5c79ae0bd52cb0d077231acb109748bc08e2d"></a>EN_EMITBACKFLOW&#160;</td><td class="fielddoc"><p><code>EN_TRUE</code> (= 1) if emitters can backflow, <code>EN_FALSE</code> (= 0) if not </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gaedba9e624549e5c519756ec0619c5c79a6adb866ab06a31bcc4d9c687161b61cc" name="gaedba9e624549e5c519756ec0619c5c79a6adb866ab06a31bcc4d9c687161b61cc"></a>EN_PRESS_UNITS&#160;</td><td class="fielddoc"><p>Pressure units (see <a class="el" href="#ga0d081ed7e724bea68d9f4bb5e3eb5d09">EN_PressUnits</a>) </p>
 </td></tr>
@@ -881,13 +887,17 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pressure units. </p>
-<p>The available choices for pressure units for the <code>EN_PRESS_UNITS</code> option in <a class="el" href="group___options.html#ga67a91dc50d36a0695e832a77bd69f116">EN_getoption</a> and <a class="el" href="group___options.html#ga3ea580fa991f5b144614c690bc722b88">EN_setoption</a>. For networks using US Customary units for flow (<code>EN_CFS</code> through <code>EN_AFD</code>) pressure units can only be set as PSI. For network using metric units, you can select either <code>EN_METERS</code> or <code>EN_KPA</code>. </p>
+<p>The available choices for pressure units for the <code>EN_PRESS_UNITS</code> option in <a class="el" href="group___options.html#ga67a91dc50d36a0695e832a77bd69f116">EN_getoption</a> and <a class="el" href="group___options.html#ga3ea580fa991f5b144614c690bc722b88">EN_setoption</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ga0d081ed7e724bea68d9f4bb5e3eb5d09ac65011537375e624ad612d0fe3450a23" name="ga0d081ed7e724bea68d9f4bb5e3eb5d09ac65011537375e624ad612d0fe3450a23"></a>EN_PSI&#160;</td><td class="fielddoc"><p>Pounds per square inch. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ga0d081ed7e724bea68d9f4bb5e3eb5d09af17fb358676d052ae867d3fa3ab9b726" name="ga0d081ed7e724bea68d9f4bb5e3eb5d09af17fb358676d052ae867d3fa3ab9b726"></a>EN_KPA&#160;</td><td class="fielddoc"><p>Kilopascals. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ga0d081ed7e724bea68d9f4bb5e3eb5d09a17da6ee096fa60eb550688abc49d0e22" name="ga0d081ed7e724bea68d9f4bb5e3eb5d09a17da6ee096fa60eb550688abc49d0e22"></a>EN_METERS&#160;</td><td class="fielddoc"><p>Meters. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ga0d081ed7e724bea68d9f4bb5e3eb5d09a0ba31c1d45b98cda485a1965b2a46783" name="ga0d081ed7e724bea68d9f4bb5e3eb5d09a0ba31c1d45b98cda485a1965b2a46783"></a>EN_BAR&#160;</td><td class="fielddoc"><p>Bar. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ga0d081ed7e724bea68d9f4bb5e3eb5d09aef95b8fc5c27011d2a60c5b221c56133" name="ga0d081ed7e724bea68d9f4bb5e3eb5d09aef95b8fc5c27011d2a60c5b221c56133"></a>EN_FEET&#160;</td><td class="fielddoc"><p>Feet. </p>
 </td></tr>
 </table>
 

@@ -114,15 +114,16 @@ $(function(){initNavTree('_valves_page.html',''); initResizable(true); });
 <li>ID of valve characteristic curve (PCVs only)</li>
 </ul>
 <p><b>Remarks:</b></p><ol type="1">
-<li>Valve types and settings include: <table class="markdownTable">
+<li>Valve types and settings include: <br  />
+<table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Valve Type   </th><th class="markdownTableHeadNone">Setting    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>PRV</b> (pressure reducing valve)   </td><td class="markdownTableBodyNone">Pressure, psi (m)    </td></tr>
+<td class="markdownTableBodyNone"><b>PRV</b> (pressure reducing valve)   </td><td class="markdownTableBodyNone">Pressure (pressure units)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><b>PSV</b> (pressure sustaining valve)   </td><td class="markdownTableBodyNone">Pressure, psi (m)    </td></tr>
+<td class="markdownTableBodyNone"><b>PSV</b> (pressure sustaining valve)   </td><td class="markdownTableBodyNone">Pressure (pressure units)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><b>PBV</b> (pressure breaker valve)   </td><td class="markdownTableBodyNone">Pressure, psi (m)    </td></tr>
+<td class="markdownTableBodyNone"><b>PBV</b> (pressure breaker valve)   </td><td class="markdownTableBodyNone">Pressure (pressure units)    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><b>FCV</b> (flow control valve)   </td><td class="markdownTableBodyNone">Flow (flow units)    </td></tr>
 <tr class="markdownTableRowOdd">
@@ -132,6 +133,7 @@ $(function(){initNavTree('_valves_page.html',''); initResizable(true); });
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><b>GPV</b> (general purpose valve)   </td><td class="markdownTableBodyNone">ID of head loss curve   </td></tr>
 </table>
+<br  />
 </li>
 <li>Shutoff valves and check valves are considered to be part of a pipe, not a separate control valve component (see <a class="el" href="_pipes_page.html">[PIPES]</a>).</li>
 <li>The loss coefficient setting for a TCV should not be less than its fully open loss coefficient.</li>

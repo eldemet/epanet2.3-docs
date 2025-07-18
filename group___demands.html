@@ -364,7 +364,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an error code.</dd></dl>
-<p>Parameters <code>pmin</code>, <code>preq</code>, and <code>pexp</code> are only used when the demand model is <code>EN_PDA</code>. </p>
+<p>Parameters <code>out_pmin</code>, <code>out_preq</code>, and <code>out_pexp</code> are only used when the demand model is <code>EN_PDA</code>. </p>
 
 </div>
 </div>
@@ -408,7 +408,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an error code.</dd></dl>
-<p><code>demandName</code> must be sized to contain at least <a class="el" href="group___enumerations.html#ga932628312d571ecb45829966f4b54be9">EN_MAXID+1</a> characters. </p>
+<p><code>out_demandName</code> must be sized to contain at least <a class="el" href="group___enumerations.html#ga932628312d571ecb45829966f4b54be9">EN_MAXID+1</a> characters. </p>
 
 </div>
 </div>
@@ -582,7 +582,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an error code.</dd></dl>
-<p>Set <code>type</code> to <code>EN_DDA</code> for a traditional demand driven analysis (in which case the remaining three parameter values are ignored) or to <code>EN_PDA</code> for a pressure driven analysis. In the latter case a node's demand is computed as:<br  />
+<p>Set <code>type</code> to <code>EN_DDA</code> for a traditional demand driven analysis (in which case the remaining three parameter values are ignored) or to <code>EN_PDA</code> for a pressure driven analysis. In the latter case a node's demand is 0 when pressure is below <code>pmin</code>, is at full demand when pressure is above <code>preq</code>, or is otherwise computed as:<br  />
  <code>Dfull * [ (P - pmin) / (preq - pmin) ] ^ pexp</code><br  />
  where <code>Dfull</code> is the full demand and <code>P</code> is the current pressure.</p>
 <p>A valid value for <code>preq</code> must be at least 0.1 pressure units larger than <code>pmin</code>. </p>

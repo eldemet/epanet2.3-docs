@@ -102,7 +102,10 @@ var group___enumerations =
       [ "EN_LINK_LEAKAGE", "epanet2__enums_8h.html#ga84af78c42cef7c16a513fbdba3b7f4edab47273c868d0914a7d58c00a739b0459", null ],
       [ "EN_VALVE_TYPE", "epanet2__enums_8h.html#ga84af78c42cef7c16a513fbdba3b7f4edacc86005ccefa4435382ed1c2ca6a7648", null ]
     ] ],
-    [ "EN_LinkStatusType", "group___enumerations.html#gac93e311004297ce675318237f62765cd", null ],
+    [ "EN_LinkStatusType", "group___enumerations.html#gac93e311004297ce675318237f62765cd", [
+      [ "EN_CLOSED", "epanet2__enums_8h.html#gac93e311004297ce675318237f62765cdaf8ea0291eee66d9647dceec860e92e40", null ],
+      [ "EN_OPEN", "epanet2__enums_8h.html#gac93e311004297ce675318237f62765cda9ef4dbab6008c84cff94e0efd800debd", null ]
+    ] ],
     [ "EN_LinkType", "group___enumerations.html#gabf3b15dab651a86d41b4cdffa1714f2b", [
       [ "EN_CVPIPE", "epanet2__enums_8h.html#gabf3b15dab651a86d41b4cdffa1714f2ba562b28072fdfd8981ad276dd366e543c", null ],
       [ "EN_PIPE", "epanet2__enums_8h.html#gabf3b15dab651a86d41b4cdffa1714f2ba6bf06fe0b37d2ace2182bbb945875d1a", null ],
@@ -201,7 +204,9 @@ var group___enumerations =
     [ "EN_PressUnits", "group___enumerations.html#ga0d081ed7e724bea68d9f4bb5e3eb5d09", [
       [ "EN_PSI", "epanet2__enums_8h.html#ga0d081ed7e724bea68d9f4bb5e3eb5d09ac65011537375e624ad612d0fe3450a23", null ],
       [ "EN_KPA", "epanet2__enums_8h.html#ga0d081ed7e724bea68d9f4bb5e3eb5d09af17fb358676d052ae867d3fa3ab9b726", null ],
-      [ "EN_METERS", "epanet2__enums_8h.html#ga0d081ed7e724bea68d9f4bb5e3eb5d09a17da6ee096fa60eb550688abc49d0e22", null ]
+      [ "EN_METERS", "epanet2__enums_8h.html#ga0d081ed7e724bea68d9f4bb5e3eb5d09a17da6ee096fa60eb550688abc49d0e22", null ],
+      [ "EN_BAR", "epanet2__enums_8h.html#ga0d081ed7e724bea68d9f4bb5e3eb5d09a0ba31c1d45b98cda485a1965b2a46783", null ],
+      [ "EN_FEET", "epanet2__enums_8h.html#ga0d081ed7e724bea68d9f4bb5e3eb5d09aef95b8fc5c27011d2a60c5b221c56133", null ]
     ] ],
     [ "EN_PumpStateType", "group___enumerations.html#ga479372136624b6cf95fac414f823a5d4", [
       [ "EN_PUMP_XHEAD", "epanet2__enums_8h.html#ga479372136624b6cf95fac414f823a5d4a37894107db939a380c626cbddfc746af", null ],

@@ -221,7 +221,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an error code.</dd></dl>
 <p>This function is used in a loop with <a class="el" href="#ga5ce5c77c9af21711e6b68b90e0512ff9" title="Makes hydraulic and water quality results at the start of the current time period available to a proj...">EN_runQ</a> to perform an extended period water quality analysis. It reacts and routes a project's water quality constituent over a time step determined by when the next hydraulic event occurs. Use <a class="el" href="#ga17b6ebe5947bda7ec2c681bcdef1c2c6" title="Advances a water quality simulation by a single water quality time step.">EN_stepQ</a> instead if you wish to generate results over each water quality time step.</p>
-<p>The value of <code>tStep</code> is determined from information produced by the hydraulic analysis that preceded the water quality analysis. Treat it as a read-only variable.</p>
+<p>The value of <code>out_tStep</code> is determined from information produced by the hydraulic analysis that preceded the water quality analysis. Treat it as a read-only variable.</p>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keywordtype">long</span> t, tStep;</div>
 <div class="line"><a class="code hl_function" href="group___hydraulics.html#gaaa7aaf68ebb9c8c6709489073fc08f8e">EN_solveH</a>(ph);  <span class="comment">// Generate &amp; save hydraulics</span></div>
 <div class="line"><a class="code hl_function" href="#ga1e8b2e81f5310d43afbe3aada5027f83">EN_openQ</a>(ph);</div>
@@ -261,7 +261,7 @@ Functions</h2></td></tr>
 <p>Opens a project's water quality solver. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ph</td><td>n EPANET project handle. </td></tr>
+    <tr><td class="paramname">ph</td><td>an EPANET project handle. </td></tr>
   </table>
   </dd>
 </dl>
@@ -363,7 +363,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an error code.</dd></dl>
 <p>This function is used in a loop with <a class="el" href="#ga5ce5c77c9af21711e6b68b90e0512ff9" title="Makes hydraulic and water quality results at the start of the current time period available to a proj...">EN_runQ</a> to perform an extended period water quality simulation. It allows one to generate water quality results at each water quality time step of the simulation, rather than over each hydraulic event period as with <a class="el" href="#ga620133212b97123394de17c9d49a1765" title="Advances a water quality simulation over the time until the next hydraulic event.">EN_nextQ</a>.</p>
-<p>Use the argument <code>timeLeft</code> to determine when no more calls to <a class="el" href="#ga5ce5c77c9af21711e6b68b90e0512ff9" title="Makes hydraulic and water quality results at the start of the current time period available to a proj...">EN_runQ</a> are needed because the end of the simulation period has been reached (i.e., when <code>timeLeft</code> = 0). </p>
+<p>Use the argument <code>out_timeLeft</code> to determine when no more calls to <a class="el" href="#ga5ce5c77c9af21711e6b68b90e0512ff9" title="Makes hydraulic and water quality results at the start of the current time period available to a proj...">EN_runQ</a> are needed because the end of the simulation period has been reached (i.e., when <code>out_timeLeft</code> = 0). </p>
 
 </div>
 </div>

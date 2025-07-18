@@ -108,7 +108,7 @@ $(function(){initNavTree('_options_page.html',''); initResizable(true); });
 <tr>
 <td></td><td><b>LPS / LPM / MLD / CMS / CMH / CMD</b> </td></tr>
 <tr>
-<td><b>PRESSURE</b></td><td><b>PSI / KPA / METERS</b> </td></tr>
+<td><b>PRESSURE</b></td><td><b>PSI / KPA / METERS / FEET / BAR</b> </td></tr>
 <tr>
 <td><b>HEADLOSS</b></td><td><b>H-W / D-W / C-M</b> </td></tr>
 <tr>
@@ -172,8 +172,8 @@ $(function(){initNavTree('_options_page.html',''); initResizable(true); });
 <li><b>CMH</b> = cubic meters per hour</li>
 <li><b>CMD</b> = cubic meters per day</li>
 </ul>
-<p>For <b>CFS, GPM, MGD, IMGD</b>, and <b>AFD</b> other input quantities are expressed in US Customary Units. If flow units are in liters or cubic meters then Metric Units must be used for all other input quantities as well. (See the <a class="el" href="_units.html">Measurement Units</a> topic). The default flow units are <b>GPM</b>.</p>
-<p><b>PRESSURE</b> sets the units in which pressure is expressed, for networks using metric units, as determined by the <b>UNITS</b> option, the choices are: (<b>KPA</b>), or (<b>METERS</b>). For networks using US Customary Units, you can only use (<b>PSI</b>).</p>
+<p>For <b>CFS, GPM, MGD, IMGD</b>, and <b>AFD</b> other input quantities are expressed in US Customary Units. If flow units are in liters or cubic meters then Metric Units must be used for all other input quantities as well. (See the <a class="el" href="_units.html">Measurement Units</a> topic). An exception is pressure which can use either US or SI units. The default flow units are <b>GPM</b>.</p>
+<p><b>PRESSURE</b> sets the units in which pressure is expressed, regardless of which unit system is in use. The default pressure unit is <b>PSI</b> for US Customary Units and <b>METERS</b> for SI Metric Units.</p>
 <p><b>HEADLOSS</b> selects a formula to use for computing head loss for flow through a pipe. The choices are the Hazen-Williams (<b>H-W</b> ), Darcy-Weisbach (<b>D-W</b> ), or Chezy-Manning (<b>C-M</b> ) formulas. The default is <b>H-W</b>.</p>
 <p>The <b>HYDRAULICS</b> option allows you to either <b>SAVE</b> the current hydraulics solution to a file or <b>USE</b> a previously saved hydraulics solution. This is useful when studying factors that only affect water quality behavior.</p>
 <p><b>VISCOSITY</b> is the kinematic viscosity of the fluid being modeled relative to that of water at 20 deg. C (1.0 centistoke). The default value is 1.0.</p>
@@ -188,7 +188,7 @@ $(function(){initNavTree('_options_page.html',''); initResizable(true); });
 <p><b>UNBALANCED</b> determines what happens if a hydraulic solution cannot be reached within the prescribed number of <b>TRIALS</b> at some hydraulic time step into the simulation. <b>STOP</b> will halt the entire analysis at that point. <b>CONTINUE</b> will continue the analysis with a warning message issued. <b>CONTINUE n</b> will continue the search for a solution for another <b>n</b> trials with the status of all links held fixed at their current settings. The simulation will be continued at this point with a message issued about whether convergence was achieved or not. The default choice is <b>STOP</b>.</p>
 <p><b>DEMAND</b> MODEL specifies whether a demand driven analysis ( <b>DDA</b> ) or a pressure driven analysis ( <b>PDA</b> ) should be made. Under <b>DDA</b> full nodal demands are always met even if negative pressures result. <b>PDA</b> assumes that demand varies between 0 and its full value as a power function of nodal pressure. The default demand model is <b>DDA</b>.</p>
 <p><b>MINIMUM</b> PRESSURE is the pressure below which no demand can be delivered under a pressure driven analysis. It has no effect on a demand driven analysis. Its default value is 0.</p>
-<p><b>REQUIRED</b> PRESSURE is the pressure required to supply a node's full demand under a pressure driven analysis. It has no effect on a demand driven analysis. It must be at least 0.1 psi or m higher than the MINIMUM PRESSURE, which is also its default value.</p>
+<p><b>REQUIRED</b> PRESSURE is the pressure required to supply a node's full demand under a pressure driven analysis. It has no effect on a demand driven analysis. It must be at least 0.1 pressure units higher than the MINIMUM PRESSURE, which is also its default value.</p>
 <p><b>PRESSURE</b> EXPONENT is the power to which pressure is raised when computing the demand delivered to a node under a pressure driven analysis. It has no effect on a demand driven analysis. Its default value is 0.5.</p>
 <p><b>PATTERN</b> provides the ID label of a default demand pattern to be applied to all junctions where no demand pattern was specified. If no such pattern exists in the <b></b>[PATTERNS] section then by default the pattern consists of a single multiplier equal to 1.0. If this option is not used, then the global default demand pattern has a label of "1".</p>
 <p>The <b>DEMAND MULTIPLIER</b> is used to adjust the values of baseline demands for all junctions and all demand categories. For example, a value of 2 doubles all baseline demands, while a value of 0.5 would halve them. The default value is 1.0.</p>
